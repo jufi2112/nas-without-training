@@ -43,6 +43,19 @@ from config_utils import load_config
 from nas_201_api import NASBench201API as API
 
 def get_batch_jacobian(net, x, target, to, device, args=None):
+    """Calculates a jacobian matrix for a batch of input data x. For each input x and the corresponding output of the
+    net f(x) = y, the Jacobian contains dy/dx.
+
+    Args:
+        net (torch.nn): The network that should be utilized for calculating the output y for an input x.
+        x: The input data
+        target: TODO
+        to: TODO unused
+        device: TODO unused
+
+    Returns:
+        tuple of torch.Tensor and TODO Target: The Jacobian and TODO Target 
+    """
     net.zero_grad()
 
     x.requires_grad_(True)
@@ -50,13 +63,22 @@ def get_batch_jacobian(net, x, target, to, device, args=None):
     _, y = net(x)
 
     y.backward(torch.ones_like(y))
-    jacob = x.grad.detach()
+    jacobian = x.grad.detach()
 
-    return jacob, target.detach()
+    return jacobian, target.detach()
 
 
-def eval_score(jacob, labels=None):
-    corrs = np.corrcoef(jacob)
+def eval_score(jacobian, labels=None):
+    """Calculates the correlation score from the given Jacobian matrix.
+
+    Args:
+        Jacobian (torch.Tensor): The Jacobian with which the correlation score should be calculated.
+        labels: TODO
+
+    Returns:
+        float: The correlation score of the given Jacobian.
+    """
+    corrs = np.corrcoef(jacobian)
     v, _  = np.linalg.eig(corrs)
     k = 1e-5
     return -np.sum(np.log(v + k) + 1./(v + k))
