@@ -4,9 +4,12 @@ This repository contains code for replicating our paper, [NAS Without Training](
 
 ## Setup
 
+The file `environment_no_build.yml` contains the needed packages without build-specific information. Currently, some packages are still linux specific.
+
 1. Download the [datasets](https://drive.google.com/drive/folders/1L0Lzq8rWpZLPfiQGd6QR8q5xLV88emU7).
 2. Download [NAS-Bench-201](https://drive.google.com/file/d/16Y0UwGisiouVRxW-W5hEtbxmcHw_0hF_/view).
-3. Install the requirements in a conda environment with `conda env create -f environment.yml`.
+3. a) Install the requirements in a new conda environment with `conda env create -f environment.yml`.
+3. b) Update an existing conda environment with `conda env update --name <myenv> --file environment.yml`.
 
 We also refer the reader to instructions in the official [NAS-Bench-201 README](https://github.com/D-X-Y/NAS-Bench-201).
 
