@@ -18,6 +18,7 @@ The file `environment_no_build.yml` contains the needed packages without build-s
 | [tqdm](https://anaconda.org/conda-forge/tqdm)             |                                                          |
 | [pandas](https://anaconda.org/anaconda/pandas)            |                                                          |
 | [graphviz](https://anaconda.org/anaconda/python-graphviz) |                                                          |
+| [matplotlib](https://anaconda.org/conda-forge/matplotlib) |                                                          |
    
 
 We also refer the reader to instructions in the official [NAS-Bench-201 README](https://github.com/D-X-Y/NAS-Bench-201).
