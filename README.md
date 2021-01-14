@@ -9,7 +9,14 @@ The file `environment_no_build.yml` contains the needed packages without build-s
 1. Download the [datasets](https://drive.google.com/drive/folders/1L0Lzq8rWpZLPfiQGd6QR8q5xLV88emU7).
 2. Download [NAS-Bench-201](https://drive.google.com/file/d/16Y0UwGisiouVRxW-W5hEtbxmcHw_0hF_/view).
 3. a) Install the requirements in a new conda environment with `conda env create -f environment.yml`. <br>
-   b) Update an existing conda environment with `conda env update --name <myenv> --file environment.yml`.
+   b) Update an existing conda environment with `conda env update --name <myenv> --file environment.yml`. <br>
+   c) If you want to manually install the required packages, take a look at the following table:
+   
+| Conda   | PyPI          |
+|:--------|---------------|
+| PyTorch | nas-bench-201 |
+| tqdm    |               |
+   
 
 We also refer the reader to instructions in the official [NAS-Bench-201 README](https://github.com/D-X-Y/NAS-Bench-201).
 
