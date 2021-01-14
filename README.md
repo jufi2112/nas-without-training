@@ -12,10 +12,12 @@ The file `environment_no_build.yml` contains the needed packages without build-s
    b) Update an existing conda environment with `conda env update --name <myenv> --file environment.yml`. <br>
    c) If you want to manually install the required packages, take a look at the following table:
    
-| Conda   | PyPI          |
-|:--------|---------------|
-| PyTorch | nas-bench-201 |
-| tqdm    |               |
+| Conda                                                | PyPI                                                     |
+|:-----------------------------------------------------|----------------------------------------------------------|
+| [PyTorch](https://pytorch.org/get-started/locally/)  | [nas-bench-201](https://pypi.org/project/nas-bench-201/) |
+| [tqdm](https://anaconda.org/conda-forge/tqdm)        |                                                          |
+| [pandas](https://anaconda.org/anaconda/pandas)       |                                                          |
+| [graphviz](https://anaconda.org/anaconda/graphviz)   |                                                          |
    
 
 We also refer the reader to instructions in the official [NAS-Bench-201 README](https://github.com/D-X-Y/NAS-Bench-201).
