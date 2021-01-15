@@ -1,0 +1,1 @@
+python search.py --dataset cifar10 --api_loc "..\datasets\NAS-Bench-201-v1_1-096897.pth" --data_loc "..\datasets" --n_runs 3 --n_samples 10

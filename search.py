@@ -86,6 +86,7 @@ def eval_score(jacobian, labels=None):
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 print(device)
+print(f'api_loc argument: {args.api_loc}')
 THE_START = time.time()
 api = API(args.api_loc)
 
